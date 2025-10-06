@@ -1,165 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Southland Guerilla Screenings</title>
-  <meta name="description" content="Underground indie + cult cinema pop-ups across the Southland. Find the next drop." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Special+Elite&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --fg: #f1f1f1;
-      --muted: #b5b5b5;
-      --accent: #ff004c;
-      --card: #151515;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: 'Special Elite', monospace;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-    }
-    a { color: var(--fg); text-decoration: underline; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 2px dashed var(--accent);
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .brand img.logo {
-      height: 40px; /* slightly larger than the text */
-    }
-    .brand h1 {
-      font: 700 24px/1 'Staatliches', sans-serif;
-      letter-spacing: 1px;
-      margin: 0;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .tagline {
-      font-size: 12px;
-      color: var(--muted);
-      font-family: 'Special Elite', monospace;
-    }
-
-    /* Hero split: text left, image right */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 24px;
-      min-height: 70vh;
-    }
-    .hero h2 {
-      font: 700 40px/1 'Staatliches', sans-serif;
-      margin: 0 0 16px;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .hero p.lede { font-size: 18px; margin: 0 0 20px; max-width: 40ch; }
-
-    .cta-row { display:flex; gap:10px; flex-wrap: wrap; margin-top: 20px; }
-    .btn {
-      padding: 10px 14px; border-radius: 2px; border: 2px solid var(--accent);
-      background: transparent; color: var(--accent);
-      font-weight: bold; font-family: 'Staatliches', sans-serif; text-transform: uppercase;
-      font-size: 14px; letter-spacing: 1px; cursor: pointer; transition: all .15s ease;
-    }
-    .btn:hover { background: var(--accent); color: var(--bg); }
-
-    /* Right-justified image panel */
-    .poster-wrap { display: flex; justify-content: flex-end; }
-    .poster {
-      width: min(420px, 100%);
-      aspect-ratio: 2 / 3;
-      border: 3px solid var(--accent);
-      overflow: hidden;
-      filter: grayscale(100%) contrast(120%) brightness(90%);
-      box-shadow: 8px 8px 0 var(--accent);
-    }
-    .poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    /* Paragraph block lower */
-    .about { margin-top: 60px; border-top: 2px dashed var(--accent); padding-top: 20px; }
-    .about p { max-width: 70ch; font-size: 16px; }
-
-    /* Footer */
-    footer {
-      border-top: 2px dashed var(--accent);
-      margin-top: 40px;
-      padding: 16px 0;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-
-    /* Mobile */
-    @media (max-width: 820px) {
-      .hero { grid-template-columns: 1fr; gap: 20px; min-height: auto; }
-      .poster-wrap { justify-content: center; }
-      .hero h2 { font-size: 28px; }
-      .brand img.logo { height: 32px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <img src="logo.png" alt="Southland Logo" class="logo">
-        <h1>Southland Guerilla Screenings</h1>
-      </div>
-      <div class="tagline">Indie • Cult • Underground</div>
-    </header>
-
-    <main class="hero">
-      <!-- LEFT -->
-      <section>
-        <h2>Next Drop: TBA</h2>
-        <p class="lede">Pop-up screenings in abandoned spaces. Bring cash, bring friends, and don’t tell the landlord. Details drop hours before showtime.</p>
-        <div class="cta-row">
-          <a class="btn" href="#alerts">Get Text Alerts</a>
-          <a class="btn" href="#submit">Submit a Spot</a>
-        </div>
-      </section>
-
-      <!-- RIGHT -->
-      <div class="poster-wrap">
-        <figure class="poster">
-          <img src="poster.jpg" alt="Film poster" />
-        </figure>
-      </div>
-    </main>
-
-    <section class="about">
-      <p>
-        Southland Guerilla Screenings is DIY cinema with teeth. We project indie bangers and cult relics on crumbling walls, alleys, rooftops, and forgotten stages. Zero sponsors, zero permission, all heart. Text drops keep the flame alive.
-      </p>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Southland Guerilla Screenings · Xerox dreams, bolt cutters, and cinema love
-    </footer>
-  </div>
-
-  <script>
+  <head>
+    <title>Southland Guerilla Screenings</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <meta name="description" content="Underground indie + cult cinema pop-ups across the Southland. Find the next drop."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;family=Special+Elite&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+  </head>
+  <body id="i3en"><div id="i7xwr" class="container"><header><div class="brand"><img src="https://southlandguerillascreenings.netlify.app/logo.png" alt="Southland Logo" class="logo"/><h1>Southland Guerilla Screenings</h1></div><div id="ia7ua" class="tagline">Independent • Cult • Underground</div></header><main id="iszd4" class="hero"><!-- LEFT --><section id="ird2e"><h2 id="itj1b">OCTOBER 25th, 2025 @ 9pm <br data-gs-ib=""/>30th year anniversary</h2><p id="idnnk" class="lede"><div id="i4y1l">SL:GS Proudly Presents:<br data-gs-ib=""/>30th Anniversary screening of:<br data-gs-ib=""/>THE DOOM GENERATION!<br data-gs-ib=""/></div><div><b id="i10uw">$6.00 Tickets</b><br data-gs-ib=""/><br data-gs-ib=""/></div></p><div id="ieykz" class="cta-row"><a href="https://docs.google.com/forms/d/e/1FAIpQLScXdbioop2cRQHKnkq6GCHeCy68kWuQo15yjr0XleqiuFjAMg/viewform?usp=dialog" id="iotxt" target="" class="btn">RSVP</a><a href="https://discord.gg/NjySAPEj3r" id="io60a" target="" class="btn">Join our Discord</a></div></section><!-- RIGHT --><div class="poster-wrap"><figure id="i6994" class="poster"><img src="https://cdn.grapesjs.com/workspaces/cmg74bzb008o4ducfmm89ljku/assets/b17cf09c-2fdd-46bd-af06-5f63a95d0443__poster.jpg" alt="Film poster" id="iz528" loading="lazy"/><img src="https://cdn.grapesjs.com/workspaces/cmg74bzb008o4ducfmm89ljku/assets/b17cf09c-2fdd-46bd-af06-5f63a95d0443__poster.jpg" alt="Film poster" id="iz528-2" loading="lazy" customAttributes=""/></figure></div></main><section id="iqtf2" class="about"><p id="i163r">Southland Guerilla Screenings is DIY cinema with teeth. We project indie bangers and cult relics on crumbling walls, alleys, rooftops, and forgotten stages. Zero sponsors, zero permission, all heart. Text drops keep the flame alive.</p></section><footer id="izgoo">
+      © <span id="year">2025</span> Southland Guerilla Screenings · Xerox dreams, bolt cutters, and cinema love
+    </footer></div><script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+  </script></body>
 </html>
